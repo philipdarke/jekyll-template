@@ -1,0 +1,36 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="{{ site.locale }}">
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ "/css/page.css" | prepend: site.baseurl }}">
+</head>
+<body>
+    <div id="body">
+        <div id="header">
+            {% include header.html %}
+        </div>
+        <div id="content">
+            <div class="title">{{ page.title }}</div>
+            <div class="author">{{ page.author }}</div>
+            <div class="date">
+                {% if page.updated %}
+                    Last updated: {{ page.updated | date: "%e %B %Y" }}
+                {% else %}
+                    {{ page.date | date: "%e %B %Y" }}
+                {% endif %}
+            </div>
+            <div><b>{{ page.description }}</b></div>
+
+            {{ content }}
+            
+        </div>
+        <div id="footer">
+            {% include footer.html %}
+        </div>
+    </div>
+</body>
+</html>

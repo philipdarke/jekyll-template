@@ -1,0 +1,11 @@
+---
+layout: home
+---
+
+{{ site.title }}
+
+<p>{{ site.description }}</p>
+
+{% assign allPages = site.posts | concat: site.pages %} {% for item in allPages %}
+    {% if item.title %}<a href="{{ item.url }}">{{ item.title }}</a><br>{% endif %}
+{% endfor %}

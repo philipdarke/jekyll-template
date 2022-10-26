@@ -1,0 +1,37 @@
+title: Site title
+email: your@email.com
+author: Philip Darke
+description: "Site description"
+locale: en
+baseurl: ""
+url: "https://yourwebsite.com/"
+twitter_username: twitter
+github_username:  github
+linkedin_username: linkedin
+
+# Build settings
+theme: null
+kramdown:
+  input: GFM
+saas:
+  sass_dir: _sass
+  style: compressed
+include:
+  - _pages
+
+# Compress HTML
+compress_html:
+  clippings: [html, div, p, h1, h2]
+  comments: [all]
+  endings: [all]
+  blanklines: false
+  profile: false
+  startings: [all]
+
+# Default front matter
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Philip Darke"  # update!
